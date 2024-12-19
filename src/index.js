@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+//import UiApp from './Uiapp';
 import App from './App';
+import Listers from './Listers';
+
 import reportWebVitals from './reportWebVitals';
+import Recipe from './Recipe';
+import ListersB from './ListersB';
+import { ListProvider } from './context/ListContext';
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const myTeam = "Barca"
 root.render(
   <React.StrictMode>
-    <App />
+   <ListProvider>
+     {/* <Recipe/> */}
+    {/* <App/> */}
+    {/* <Listers/> */}
+    <ListersB/>
+   </ListProvider>
+   
   </React.StrictMode>
 );
 
